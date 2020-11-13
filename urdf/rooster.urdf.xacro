@@ -51,9 +51,11 @@
       <origin xyz="0 0 77.258e-3" rpy="0 0 ${-pi/4}" />
     </xacro:os_device>
     <!-- add RealSense D435i (the mesh is actually the non-IMU version -->
+    <xacro:if value="false">
     <xacro:sensor_d435i name="camera" parent="realsense_parent" use_nominal_extrinsics="${simulation}">
       <origin xyz="0 0 0" rpy="0 0 0" />
     </xacro:sensor_d435i>
+    </xacro:if>
     <link name="realsense_parent" />
     <joint name="base_to_realsense" type="fixed">
       <origin xyz="73.65e-3 7.5e-3 50.75e-3" rpy="0 0 0" />
