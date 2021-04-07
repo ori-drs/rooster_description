@@ -91,7 +91,7 @@
         <parent link="base_mount" />
         <child link="ground_camera_shim" />
       </joint>
-      <xacro:sensor_d435i name="ground_camera" parent="ground_camera_shim" use_nominal_extrinsics="${simulation}">
+      <xacro:sensor_d435i name="camera_ground" parent="ground_camera_shim" use_nominal_extrinsics="${simulation}">
         <origin xyz="14.345e-3 7.5e-3 -25.212e-3" rpy="0 ${pi*40.0/180.0} 0" />
       </xacro:sensor_d435i>
     </xacro:if>

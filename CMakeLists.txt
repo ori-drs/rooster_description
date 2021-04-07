@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(rooster_description)
 
-find_package(catkin REQUIRED COMPONENTS
-  realsense2_description  # To throw a failure if the realsense2_description is not installed
-  xacro
-)
+find_package(catkin REQUIRED COMPONENTS ouster_description  
+	                                realsense2_description  # To throw a failure if the realsense2_description is not installed
+					xacro)
 
 catkin_package(CATKIN_DEPENDS xacro)
 
